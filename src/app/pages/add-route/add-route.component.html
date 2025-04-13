@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>Új járat hozzáadása</mat-card-title>
+    <mat-card-content>
+        <form (ngSubmit)="saveRoute()">
+            <mat-form-field appearance="fill">
+                <mat-label>Járat neve</mat-label>
+                <input matInput [(ngModel)]="newRoute.name" name="name" required>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Induló megálló</mat-label>
+                <input matInput [(ngModel)]="newRoute.from" name="from" required>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Végállomás</mat-label>
+                <input matInput [(ngModel)]="newRoute.to" name="to" required>
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Becsült járat úthossza</mat-label>
+                <input matInput [(ngModel)]="newRoute.time" name="time" required>
+            </mat-form-field>
+    
+            <br>
+            <button mat-raised-button color="primary" type="submit">Járat felvétele</button>
+        </form>
+    </mat-card-content>
+</mat-card>

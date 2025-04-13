@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Járatok listázása</mat-card-title>
+    <mat-card-content>
+        <table mat-table [dataSource]="routes" class="mat-elevation-z8">
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Járat neve</th>
+                <td mat-cell *matCellDef="let route" [ngClass]="{ 'highlight': route.isActive } " [ngStyle]="{ 'color': route.isActive ? 'green' : 'black' }">{{ route.name }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="from">
+                <th mat-header-cell *matHeaderCellDef>Induló megálló</th>
+                <td mat-cell *matCellDef="let route" [ngClass]="{ 'highlight': route.isActive }">{{ route.from }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="to">
+                <th mat-header-cell *matHeaderCellDef>Végállomás</th>
+                <td mat-cell *matCellDef="let route" [ngClass]="{ 'highlight': route.isActive }">{{ route.to }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="time">
+                <th mat-header-cell *matHeaderCellDef>Járat becsült menetideje</th>
+                <td mat-cell *matCellDef="let route" [ngClass]="{ 'highlight': route.isActive }" [ngStyle]="{ 'font-weight': route.isActive ? 'bold' : 'normal' }">{{ route.time }}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row, columns: displayedColumns;"></tr>
+        </table>
+    </mat-card-content>
+</mat-card>
+
+<ng-template #noRoutes>
+    <p>Nincs megjelenítendő járat.</p>
+</ng-template>
