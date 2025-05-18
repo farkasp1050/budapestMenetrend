@@ -1,0 +1,11 @@
+<h1>Saját Profil</h1>
+
+<div *ngIf="userData">
+    <label for="name">Név:</label>
+    <input id="name" [(ngModel)]="userData.name" type="text"/>
+
+    <label for="email">Email:</label>
+    <input type="email" [(ngModel)]="userData.email" type="email" disabled/>
+
+    <button (click)="updateProfile()">Módosítások mentése</button>
+</div>

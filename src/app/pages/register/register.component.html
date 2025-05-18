@@ -1,0 +1,22 @@
+<h1>Regisztráció</h1>
+<form [formGroup]="formForRegister" (ngSubmit)="onRegister()">
+    <label>Név:</label>
+    <input type="text" formControlName="name" required />
+    <div *ngIf="formForRegister.controls.name.invalid && formForRegister.controls.name.touched">
+        <small style="color: red;">Név megadása kötelező!</small>
+    </div>
+
+    <label>Email:</label>
+    <input type="email" formControlName="email" required />
+    <div *ngIf="formForRegister.controls.email.invalid && formForRegister.controls.email.touched">
+        <small style="color: red;">Érvényes email címet adj meg!</small>
+    </div>
+
+    <label>Jelszó:</label>
+    <input type="password" formControlName="password" required />
+    <div *ngIf="formForRegister.controls.password.invalid && formForRegister.controls.password.touched">
+        <small style="color: red;">Érvényes jelszót adj meg! (legalább 5 karakter hosszúságú)</small>
+    </div>
+
+    <button type="submit">Regisztráció</button>
+</form>

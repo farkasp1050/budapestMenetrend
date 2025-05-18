@@ -1,7 +1,7 @@
 <mat-card>
     <mat-card-title>Új járat hozzáadása</mat-card-title>
     <mat-card-content>
-        <form (ngSubmit)="saveRoute()">
+        <form (ngSubmit)="submitRoute()">
             <mat-form-field appearance="fill">
                 <mat-label>Járat neve</mat-label>
                 <input matInput [(ngModel)]="newRoute.name" name="name" required>

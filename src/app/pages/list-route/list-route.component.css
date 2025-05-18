@@ -1,17 +1,48 @@
-.listingTable {
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
-  }
-  
-  .listingTable th,
-  .listingTable td {
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    text-align: left;
-  }
-  
-  .listingTable th {
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+tr:nth-child(even) {
     background-color: #f5f5f5;
-  }
-  
+}
+
+tr:hover {
+    background-color: rgba(25, 118, 210, 0.1);
+}
+
+th {
+    background-color: #1976D2;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    background-color: #1976D2;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #1565C0;
+}

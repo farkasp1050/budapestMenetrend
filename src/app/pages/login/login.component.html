@@ -1,0 +1,16 @@
+<h1>Bejelentkezés</h1>
+<form [formGroup]="formForLogin" (ngSubmit)="onLogin()">
+    <label>Email:</label>
+    <input type="email" formControlName="email" required />
+    <div *ngIf="formForLogin.controls.email.invalid && formForLogin.controls.email.touched">
+        <small style="color: red;">Érvényes email címet adj meg!</small>
+    </div>
+
+    <label>Jelszó:</label>
+    <input type="password" formControlName="password" required />
+    <div *ngIf="formForLogin.controls.password.invalid && formForLogin.controls.password.touched">
+        <small style="color: red;">Jelszó nem egyezik!</small>
+    </div>
+
+    <button type="submit">Bejelentkezés</button>
+</form>

@@ -3,13 +3,56 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-  }
+}
   
-  .add-route-button {
+.add-route-button {
     padding: 0.5rem 1rem;
     background-color: #007acc;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
+
+button {
+    background-color: #1976D2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #1565C0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #1976D2;
+}
+
+section {
+    padding: 40px;
+    background: #F5F5F5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+div {
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
