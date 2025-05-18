@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { RouteService } from '../../services/routes.service';
 import { Firestore, collection, collectionData, doc, deleteDoc, updateDoc} from '@angular/fire/firestore';
-
+import { ShortRouteNamePipe } from '../../pipes/shorterNames.pipe';
 import { MatCard } from '@angular/material/card';
 import { MatCardTitle } from '@angular/material/card';
 import { MatCardContent } from '@angular/material/card';
@@ -15,7 +15,7 @@ import { MatTableModule } from '@angular/material/table';
 @Component({
   selector: 'app-list-route',
   standalone: true,
-  imports: [FormsModule, MatTableModule, MatCard, MatCardTitle, MatCardContent, MatTable, CommonModule],
+  imports: [FormsModule, MatTableModule, MatCard, MatCardTitle, MatCardContent, MatTable, CommonModule, ShortRouteNamePipe],
   templateUrl: './list-route.component.html',
   styleUrl: './list-route.component.css'
 })
